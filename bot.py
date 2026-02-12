@@ -202,4 +202,8 @@ async def on_ready():
     await tree.sync()
     print(f"✅ 봇 로그인 완료: {client.user}")
 
+
 client.run(TOKEN)
+
+client.run(TOKEN)
+
