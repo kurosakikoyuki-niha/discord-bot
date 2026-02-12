@@ -2,11 +2,11 @@ import discord
 from discord import app_commands
 import aiohttp
 import random
+import os
 
-# 🔐 토큰 / API 키
-TOKEN = "MTQ3MTUwMTM5MzU2NjM2Nzg5Nw.GEsxEx.KXctztL0wqAqTGzV8GK-IHcErXh5XSVmNkrmTs"
-RULE34_API_KEY = "990259e0bfc6c8a80f6e5c8ac1bb1efd73f86755d71ea265336bb6a9bb3e88c1b98b70c354b3e14e44b967746f5370e339ce7c874253fc041913dad00d6e0021"
-RULE34_USER_ID = "5928735"
+TOKEN = os.getenv("DISCORD_TOKEN")
+RULE34_API_KEY = os.getenv("RULE34_API_KEY")
+RULE34_USER_ID = os.getenv("RULE34_USER_ID")
 
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
